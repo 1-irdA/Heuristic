@@ -1,3 +1,12 @@
+/**
+ * @file Heuristic.cpp
+ * @author Adrien GARROUSTE - 1irda.alwaysdata.net
+ * @brief Class to launch heuristic method 
+ * @version 0.1
+ * @date 2021-01-04
+ * @copyright No copyright no right
+ */
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -5,6 +14,12 @@
 #include "../headers/Box.hpp"
 #include "../headers/Value.hpp"
 
+/**
+ * @brief Construct a new object
+ * @param algorithm algorithm choosed by user
+ * @param box_size size of all boxes
+ * @param values_size all size of values to put in boxes
+ */
 Heuristic::Heuristic(int algorithm, int box_size, std::vector<int> values_size) {
 
     this->algorithm = algorithm;
@@ -15,6 +30,9 @@ Heuristic::Heuristic(int algorithm, int box_size, std::vector<int> values_size) 
     }
 }
 
+/**
+ * @brief First fit algorithm
+ */
 void Heuristic::first_fit() {
 
     size_t nb_taken = 0;
@@ -40,16 +58,25 @@ void Heuristic::first_fit() {
     }
 }
 
+/**
+ * @brief Best fit algorithm
+ */
 void Heuristic::best_fit() {
     // TODO
 }
 
+/**
+ * @brief Sort vector in descending order
+ */
 void Heuristic::descending_order() {
     std::sort(this->values_container.begin(), 
             this->values_container.end(), 
             [](const Value &a, const Value &b) -> bool { return a.get_size() > b.get_size(); });
 }
 
+/**
+ * @brief Display results
+ */
 void Heuristic::display() {
 
     std::cout << "Number of boxes used : " << this->boxes_container.size() << std::endl;
@@ -60,7 +87,11 @@ void Heuristic::display() {
     }
 }
 
+/**
+ * @brief Choose algo to launch
+ */
 void Heuristic::choose_algo() {
+
     switch (this->algorithm) 
     {
         case 1: 
@@ -78,6 +109,9 @@ void Heuristic::choose_algo() {
     }
 }
 
+/**
+ * @brief Launch heuristic method
+ */
 void Heuristic::launch() {
     this->choose_algo();
     this->display();

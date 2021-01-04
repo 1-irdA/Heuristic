@@ -1,7 +1,20 @@
+/**
+ * @file main.cpp
+ * @author Adrien GARROUSTE - 1irda.alwaysdata.nets
+ * @brief Main to launch program
+ * @version 0.1
+ * @date 2021-01-04
+ * @copyright No copyright no right 
+ */
+
 #include <iostream>
 #include <vector>
 #include "headers/Heuristic.hpp"
 
+/**
+ * @brief Method to launch program
+ * @return int code returned by program
+ */
 int main() {
 
     const int STOP = 0;
