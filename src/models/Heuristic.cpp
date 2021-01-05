@@ -12,7 +12,7 @@
 #include <algorithm>
 #include "../headers/Heuristic.hpp"
 #include "../headers/Box.hpp"
-#include "../headers/Value.hpp"
+#include "../headers/Item.hpp"
 
 /**
  * @brief Construct a new object
@@ -24,9 +24,10 @@ Heuristic::Heuristic(int algorithm, int box_size, std::vector<int> values_size) 
 
     this->algorithm = algorithm;
     this->box_size = box_size;
+    this->nb_taken = 0;
 
     for (int size : values_size) {
-        this->values_container.push_back(Value(size));    
+        this->items_container.push_back(Item(size));    
     }
 }
 
@@ -35,22 +36,20 @@ Heuristic::Heuristic(int algorithm, int box_size, std::vector<int> values_size) 
  */
 void Heuristic::first_fit() {
 
-    size_t nb_taken = 0;
     int current_box = 0;
 
-    while (nb_taken != this->values_container.size()){
+    while (this->nb_taken != this->items_container.size()){
 
         this->boxes_container.push_back(Box(this->box_size));
 
-        for (size_t j = 0; j < this->values_container.size() 
-            && this->boxes_container[current_box].get_capacity() > 0; j++) {
+        for (size_t current_item = 0; current_item < this->items_container.size() 
+            && this->boxes_container[current_box].get_capacity() > 0; current_item++) {
 
-            if (this->values_container[j].get_size() 
-            <= this->boxes_container[current_box].get_capacity()
-            && !this->values_container[j].get_is_taken()) {
+            if (this->items_container[current_item].get_size() <= this->boxes_container[current_box].get_capacity()
+                && !this->items_container[current_item].get_is_taken()) {
 
-                this->boxes_container[current_box].put(this->values_container[j]);
-                nb_taken++;
+                this->boxes_container[current_box].put(this->items_container[current_item]);
+                this->nb_taken++;
             }
         }
 
@@ -62,16 +61,15 @@ void Heuristic::first_fit() {
  * @brief Best fit algorithm
  */
 void Heuristic::best_fit() {
-    // TODO
 }
 
 /**
  * @brief Sort vector in descending order
  */
 void Heuristic::descending_order() {
-    std::sort(this->values_container.begin(), 
-            this->values_container.end(), 
-            [](const Value &a, const Value &b) -> bool { return a.get_size() > b.get_size(); });
+    std::sort(this->items_container.begin(), 
+            this->items_container.end(), 
+            [](const Item &a, const Item &b) -> bool { return a.get_size() > b.get_size(); });
 }
 
 /**
@@ -103,6 +101,19 @@ void Heuristic::choose_algo() {
         case 2: 
         {
             this->descending_order();
+            this->first_fit();
+            break;
+        }
+
+        case 3: 
+        {
+            this->best_fit();
+            break;
+        }
+
+        case 4: 
+        {
+            this->best_fit();
             this->first_fit();
             break;
         }

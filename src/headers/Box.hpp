@@ -1,7 +1,7 @@
 #ifndef __BOX__
 #define __BOX__
 
-#include "Value.hpp"
+#include "Item.hpp"
 #include <vector>
 
 class Box {
@@ -10,13 +10,13 @@ class Box {
 
     unsigned int capacity;
 
-    std::vector<Value> container;    
+    std::vector<Item> container;    
 
     public:
 
     Box(unsigned int capacity);
 
-    void put(Value &value);
+    void put(Item &value);
 
     unsigned int get_capacity();
 

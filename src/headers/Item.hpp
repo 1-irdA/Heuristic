@@ -1,7 +1,7 @@
 #ifndef __VALUE__
 #define __VALUE__
 
-class Value {
+class Item {
 
     private:
 
@@ -11,7 +11,9 @@ class Value {
 
     public:
 
-    Value(unsigned int size);
+    Item();
+
+    Item(unsigned int size);
 
     unsigned int get_size() const;
 

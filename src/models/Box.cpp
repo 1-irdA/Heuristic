@@ -5,19 +5,24 @@ Box::Box(unsigned int capacity) {
     this->capacity = capacity;
 }
 
-void Box::put(Value &to_add)
+void Box::put(Item &to_add)
 {
-    this->container.push_back(to_add);
-    to_add.set_is_taken(true);
-    this->capacity -= to_add.get_size();
+    if (!to_add.get_is_taken() && to_add.get_size() <= this->capacity) {
+        this->container.push_back(to_add);
+        to_add.set_is_taken(true);
+        this->capacity -= to_add.get_size();
+    }
 }
 
 void Box::display_content() {
 
-    for (Value value : this->container) {
+    int total = 0;
+
+    for (Item value : this->container) {
         std::cout << value.get_size() << " "; 
+        total += value.get_size();
     }
-    std::cout << std::endl;
+    std::cout << " => Total : " << total << std::endl;
 }
 
 unsigned int Box::get_capacity() {
