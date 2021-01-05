@@ -7,8 +7,6 @@ class Item {
 
     unsigned int size;
 
-    bool is_taken;
-
     public:
 
     Item();
@@ -16,10 +14,6 @@ class Item {
     Item(unsigned int size);
 
     unsigned int get_size() const;
-
-    bool get_is_taken();
-
-    void set_is_taken(bool taken);
 };
 
 #endif

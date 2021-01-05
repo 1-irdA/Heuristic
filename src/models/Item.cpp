@@ -14,7 +14,6 @@
  */
 Item::Item() {
     this->size = 0;
-    this->is_taken = false;
 }
 
 /**
@@ -23,7 +22,6 @@ Item::Item() {
  */
 Item::Item(unsigned int size) {
     this->size = size;
-    this->is_taken = false;
 }
 
 /**
@@ -32,21 +30,4 @@ Item::Item(unsigned int size) {
  */
 unsigned int Item::get_size() const {
     return this->size;
-}
-
-/**
- * @brief Set the taken attriubte
- * @return true if this object is in a box
- * @return false else
- */
-bool Item::get_is_taken() {
-    return this->is_taken;
-}
-
-/**
- * @brief Set is taken attribute
- * @param taken true of false
- */
-void Item::set_is_taken(bool taken) {
-    this->is_taken = taken;
 }

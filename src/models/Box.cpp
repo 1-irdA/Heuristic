@@ -7,9 +7,8 @@ Box::Box(unsigned int capacity) {
 
 void Box::put(Item &to_add)
 {
-    if (!to_add.get_is_taken() && to_add.get_size() <= this->capacity) {
+    if (to_add.get_size() <= this->capacity) {
         this->container.push_back(to_add);
-        to_add.set_is_taken(true);
         this->capacity -= to_add.get_size();
     }
 }

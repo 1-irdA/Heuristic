@@ -24,7 +24,6 @@ Heuristic::Heuristic(int algorithm, int box_size, std::vector<int> values_size) 
 
     this->algorithm = algorithm;
     this->box_size = box_size;
-    this->nb_taken = 0;
 
     for (int size : values_size) {
         this->items_container.push_back(Item(size));    
@@ -38,19 +37,19 @@ void Heuristic::first_fit() {
 
     int current_box = 0;
 
-    while (this->nb_taken != this->items_container.size()){
+    while(!this->items_container.empty()) {
 
         this->boxes_container.push_back(Box(this->box_size));
 
         for (size_t current_item = 0; current_item < this->items_container.size() 
             && this->boxes_container[current_box].get_capacity() > 0; current_item++) {
 
-            if (this->items_container[current_item].get_size() <= this->boxes_container[current_box].get_capacity()
-                && !this->items_container[current_item].get_is_taken()) {
-
+            if (this->items_container[current_item].get_size() <= this->boxes_container[current_box].get_capacity()) {
                 this->boxes_container[current_box].put(this->items_container[current_item]);
-                this->nb_taken++;
-            }
+                this->items_container.erase(this->items_container.begin() + current_item);
+                // don't jump an element
+                current_item--;
+            } 
         }
 
         current_box++;
@@ -61,6 +60,56 @@ void Heuristic::first_fit() {
  * @brief Best fit algorithm
  */
 void Heuristic::best_fit() {
+
+    unsigned int current_box = 0;
+    int better_choice;
+
+    while(!this->items_container.empty()) {
+
+        this->boxes_container.push_back(Box(this->box_size));
+        this->boxes_container[current_box].put(this->items_container[0]);
+        this->items_container.erase(this->items_container.begin() + 0);
+
+        for (size_t current_item = 0; current_item < this->items_container.size() 
+            && this->boxes_container[current_box].get_capacity() > 0; current_item++) {
+
+            better_choice = get_better_index(current_box);
+            this->boxes_container[current_box].put(this->items_container[better_choice]);
+            this->items_container.erase(this->items_container.begin() + better_choice);
+        }
+
+        current_box++;
+    }
+}
+
+/**
+ * @brief Get the index of the better choice to put in the current box
+ * @param current_box current box to fill
+ * @return int index of better item
+ */
+int Heuristic::get_better_index(int current_box) {
+
+    int better_index = -1;
+    unsigned int max = 0;
+    int index;
+
+    for (size_t current_item = 0; current_item < this->items_container.size() 
+            && better_index == -1; 
+            current_item++) {
+        if (this->items_container[current_item].get_size() == this->boxes_container[current_box].get_capacity()) {
+            better_index = current_item;
+        } else if (this->items_container[current_item].get_size() > max 
+            && this->items_container[current_item].get_size() <= this->boxes_container[current_box].get_capacity()) {
+            max = this->items_container[current_item].get_size();
+            index = current_item;
+        }
+    }
+
+    if (better_index != -1) {
+        index = better_index;
+    }
+
+    return index;
 }
 
 /**

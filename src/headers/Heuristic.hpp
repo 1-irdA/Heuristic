@@ -13,8 +13,6 @@ class Heuristic {
 
     int box_size;
 
-    size_t nb_taken;
-
     std::vector<Box> boxes_container;
 
     std::vector<Item> items_container;
@@ -29,11 +27,7 @@ class Heuristic {
 
     void choose_algo();
 
-    void put_max_value(Box& box);
-
-    void put_next(int current_box);
-
-    void through_and_check(int box_index, size_t nb_placed);
+    int get_better_index(int current_box);
 
     public:
 
