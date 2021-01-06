@@ -1,5 +1,5 @@
-#ifndef __VALUE__
-#define __VALUE__
+#ifndef __ITEM__
+#define __ITEM__
 
 class Item {
 

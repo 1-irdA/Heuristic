@@ -1,8 +1,10 @@
 #ifndef __BOX__
 #define __BOX__
 
-#include "Item.hpp"
+#include <string>
 #include <vector>
+#include "Item.hpp"
+
 
 class Box {
 
@@ -16,7 +18,7 @@ class Box {
 
     Box(unsigned int capacity);
 
-    void put(Item &value);
+    void put(const Item &value);
 
     unsigned int get_capacity();
 

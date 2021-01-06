@@ -6,10 +6,9 @@
  * @date 2021-01-04
  * @copyright No copyright no right
  */
-
+#include <algorithm>
 #include <iostream>
 #include <vector>
-#include <algorithm>
 #include "../headers/Heuristic.hpp"
 #include "../headers/Box.hpp"
 #include "../headers/Item.hpp"
@@ -47,7 +46,7 @@ void Heuristic::first_fit() {
             if (this->items_container[current_item].get_size() <= this->boxes_container[current_box].get_capacity()) {
                 this->boxes_container[current_box].put(this->items_container[current_item]);
                 this->items_container.erase(this->items_container.begin() + current_item);
-                // don't jump an element
+                // don't jump an item
                 current_item--;
             } 
         }
@@ -62,20 +61,20 @@ void Heuristic::first_fit() {
 void Heuristic::best_fit() {
 
     unsigned int current_box = 0;
-    int better_choice;
+    Item better_choice;
 
     while(!this->items_container.empty()) {
 
         this->boxes_container.push_back(Box(this->box_size));
         this->boxes_container[current_box].put(this->items_container[0]);
-        this->items_container.erase(this->items_container.begin() + 0);
+        this->remove_at(0);
 
-        for (size_t current_item = 0; current_item < this->items_container.size() 
-            && this->boxes_container[current_box].get_capacity() > 0; current_item++) {
+        for (size_t current_item = 0; current_item < this->items_container.size()
+            && this->boxes_container[current_box].get_capacity() > 0;
+            current_item++) {
 
-            better_choice = get_better_index(current_box);
-            this->boxes_container[current_box].put(this->items_container[better_choice]);
-            this->items_container.erase(this->items_container.begin() + better_choice);
+            better_choice = get_better_item(current_box);
+            this->boxes_container[current_box].put(better_choice);
         }
 
         current_box++;
@@ -83,33 +82,40 @@ void Heuristic::best_fit() {
 }
 
 /**
- * @brief Get the index of the better choice to put in the current box
+ * @brief Get the better index to add
  * @param current_box current box to fill
- * @return int index of better item
+ * @return Item item with max size
  */
-int Heuristic::get_better_index(int current_box) {
+Item Heuristic::get_better_item(int current_box) {
 
-    int better_index = -1;
-    unsigned int max = 0;
-    int index;
+    Item max;
+    int i = 0;
+    int index_max = -1;
 
-    for (size_t current_item = 0; current_item < this->items_container.size() 
-            && better_index == -1; 
-            current_item++) {
-        if (this->items_container[current_item].get_size() == this->boxes_container[current_box].get_capacity()) {
-            better_index = current_item;
-        } else if (this->items_container[current_item].get_size() > max 
-            && this->items_container[current_item].get_size() <= this->boxes_container[current_box].get_capacity()) {
-            max = this->items_container[current_item].get_size();
-            index = current_item;
+    for (Item item : this->items_container) {
+
+        if (item.get_size() > max.get_size() 
+            && item.get_size() <= this->boxes_container[current_box].get_capacity()) {
+            
+            max = item;
+            index_max = i;
         }
+        i++;
     }
 
-    if (better_index != -1) {
-        index = better_index;
-    }
+    this->remove_at(index_max);
 
-    return index;
+    return max;
+}
+
+/**
+ * @brief Remove item at specified index
+ * @param index index of item to remove
+ */
+void Heuristic::remove_at(int index) {
+    if (index >= 0) {
+        this->items_container.erase(this->items_container.begin() + index);
+    }
 }
 
 /**

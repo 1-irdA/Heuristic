@@ -1,5 +1,5 @@
-#ifndef __FF__
-#define _FF_
+#ifndef __HEURISTIC__
+#define __HEURISTIC__
 
 #include <vector>
 #include "Box.hpp"
@@ -27,7 +27,9 @@ class Heuristic {
 
     void choose_algo();
 
-    int get_better_index(int current_box);
+    Item get_better_item(int current_box);
+
+    void remove_at(int index);
 
     public:
 
