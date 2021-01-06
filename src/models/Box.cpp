@@ -14,7 +14,7 @@
  * @brief Construct a box object 
  * @param capacity box capacity
  */
-Box::Box(unsigned int capacity) {
+Box::Box(int capacity) {
     this->capacity = capacity;
 }
 
@@ -22,11 +22,11 @@ Box::Box(unsigned int capacity) {
  * @brief Add an item in box
  * @param to_add item to add
  */
-void Box::put(const Item &to_add)
+void Box::put(const int &to_add)
 {
-    if (to_add.get_size() <= this->capacity && to_add.get_size() > 0) {
+    if (to_add <= this->capacity) {
         this->container.push_back(to_add);
-        this->capacity -= to_add.get_size();
+        this->capacity -= to_add;
     }
 }
 
@@ -37,17 +37,17 @@ void Box::display_content() {
 
     int total = 0;
 
-    for (Item value : this->container) {
-        std::cout << value.get_size() << " "; 
-        total += value.get_size();
+    for (int item : this->container) {
+        std::cout << item << " "; 
+        total += item;
     }
     std::cout << " => Total : " << total << std::endl;
 }
 
 /**
  * @brief Return box capacity
- * @return unsigned int capacity
+ * @return int capacity
  */
-unsigned int Box::get_capacity() {
+int Box::get_capacity() {
     return this->capacity;
 }

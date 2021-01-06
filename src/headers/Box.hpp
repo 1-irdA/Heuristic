@@ -3,24 +3,22 @@
 
 #include <string>
 #include <vector>
-#include "Item.hpp"
-
 
 class Box {
 
     private:
 
-    unsigned int capacity;
+    int capacity;
 
-    std::vector<Item> container;    
+    std::vector<int> container;    
 
     public:
 
-    Box(unsigned int capacity);
+    Box(int capacity);
 
-    void put(const Item &value);
+    void put(const int &item);
 
-    unsigned int get_capacity();
+    int get_capacity();
 
     void display_content();
 };

@@ -11,10 +11,9 @@
 #include <vector>
 #include "../headers/Heuristic.hpp"
 #include "../headers/Box.hpp"
-#include "../headers/Item.hpp"
 
 /**
- * @brief Construct a new object
+ * @brief Construct a new heuristic object
  * @param algorithm algorithm choosed by user
  * @param box_size size of all boxes
  * @param values_size all size of values to put in boxes
@@ -25,7 +24,7 @@ Heuristic::Heuristic(int algorithm, int box_size, std::vector<int> values_size) 
     this->box_size = box_size;
 
     for (int size : values_size) {
-        this->items_container.push_back(Item(size));    
+        this->items_container.push_back(size);    
     }
 }
 
@@ -43,7 +42,7 @@ void Heuristic::first_fit() {
         for (size_t current_item = 0; current_item < this->items_container.size() 
             && this->boxes_container[current_box].get_capacity() > 0; current_item++) {
 
-            if (this->items_container[current_item].get_size() <= this->boxes_container[current_box].get_capacity()) {
+            if (this->items_container[current_item] <= this->boxes_container[current_box].get_capacity()) {
                 this->boxes_container[current_box].put(this->items_container[current_item]);
                 this->items_container.erase(this->items_container.begin() + current_item);
                 // don't jump an item
@@ -60,8 +59,8 @@ void Heuristic::first_fit() {
  */
 void Heuristic::best_fit() {
 
-    unsigned int current_box = 0;
-    Item better_choice;
+    int current_box = 0;
+    int better_choice;
 
     while(!this->items_container.empty()) {
 
@@ -84,19 +83,17 @@ void Heuristic::best_fit() {
 /**
  * @brief Get the better index to add
  * @param current_box current box to fill
- * @return Item item with max size
+ * @return int item with max size
  */
-Item Heuristic::get_better_item(int current_box) {
+int Heuristic::get_better_item(int current_box) {
 
-    Item max;
+    int max = 0;
     int i = 0;
     int index_max = -1;
 
-    for (Item item : this->items_container) {
+    for (int item : this->items_container) {
 
-        if (item.get_size() > max.get_size() 
-            && item.get_size() <= this->boxes_container[current_box].get_capacity()) {
-            
+        if (item > max && item <= this->boxes_container[current_box].get_capacity()) {
             max = item;
             index_max = i;
         }
@@ -124,7 +121,7 @@ void Heuristic::remove_at(int index) {
 void Heuristic::descending_order() {
     std::sort(this->items_container.begin(), 
             this->items_container.end(), 
-            [](const Item &a, const Item &b) -> bool { return a.get_size() > b.get_size(); });
+            [](const int &a, const int &b) -> bool { return a > b; });
 }
 
 /**
