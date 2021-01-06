@@ -32,4 +32,4 @@
 *.app
 
 # Main file
-main
+./main
