@@ -174,6 +174,11 @@ void Heuristic::choose_algo() {
             this->first_fit();
             break;
         }
+        // Not exist
+        default:
+        {
+            std::cout << "Error ! Incorrect algorithm." << std::endl;
+        }
     }
 }
 

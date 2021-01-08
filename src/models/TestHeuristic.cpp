@@ -34,34 +34,35 @@ const std::vector<int> fixture_boxes = {
 void TestHeuristic::test() {
 
     clock_t begin_algo;
-    clock_t begin_tests = clock();
+    clock_t begin_tests;
     clock_t end_algo;
     clock_t end_tests;
 
     std::cout << "\nNumber of objects to be placed in each box size : " << NB_ITEMS << "\n" << std::endl;
+    
+    begin_tests = clock();
 
-    for (std::map<int, std::string>::iterator it = fixture_algorithms.begin(); 
+    for (int box_size : fixture_boxes) {
+
+        std::cout << "\n********** Boxes size : " << box_size << " **********\n\n";
+
+        for (std::map<int, std::string>::iterator it = fixture_algorithms.begin(); 
             it != fixture_algorithms.end(); 
             it++) {
 
-        std::cout << "\n********** Algorithm : " << it->second << " **********\n" << std::endl;
-        begin_algo = clock();
-
-        for (int box_size : fixture_boxes) {
-
-            std::cout << "boxes size : " << box_size << ", ";
-
+            std::cout << "Algorithm : " << it->second << ", ";
+            
             std::vector<int> items = Generator::generate_items(NB_ITEMS, box_size);
-
+            
             Heuristic heuristic = Heuristic(it->first, box_size, items);
+            begin_algo = clock();
             heuristic.launch();
+            end_algo = clock();
 
             std::cout << "used boxes : " << heuristic.get_nb_used_boxes() << std::endl;
+            std::cout << "Duration of " << it->second << " algorithm : " 
+                        << double(end_algo - begin_algo) / CLOCKS_PER_SEC << " seconds" << std::endl;
         }
-
-        end_algo = clock();
-        std::cout << "Duration of " << it->second << " algorithm : " 
-            << double(end_algo - begin_algo) / CLOCKS_PER_SEC << " seconds" << std::endl;
     }
 
     end_tests = clock();
