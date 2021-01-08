@@ -6,11 +6,12 @@
  * @date 2021-01-04
  * @copyright No copyright no right
  */
+#include "../headers/Box.hpp"
+#include "../headers/Heuristic.hpp"
 #include <algorithm>
 #include <iostream>
+#include <stdexcept>
 #include <vector>
-#include "../headers/Heuristic.hpp"
-#include "../headers/Box.hpp"
 
 /**
  * @brief Construct a new heuristic object
@@ -24,6 +25,9 @@ Heuristic::Heuristic(int algorithm, int box_size, std::vector<int> values_size) 
     this->box_size = box_size;
 
     for (int size : values_size) {
+        if (size > box_size) {
+            throw std::runtime_error("Error ! Item can't be greater than box size.\n");
+        }
         this->items_container.push_back(size);    
     }
 }
@@ -72,7 +76,7 @@ void Heuristic::best_fit() {
             && this->boxes_container[current_box].get_capacity() > 0;
             current_item++) {
 
-            better_choice = get_better_item(current_box);
+            better_choice = this->get_better_item(current_box);
             this->boxes_container[current_box].put(better_choice);
         }
 
@@ -127,7 +131,7 @@ void Heuristic::descending_order() {
 /**
  * @brief Display results
  */
-void Heuristic::display() {
+void Heuristic::display() const {
 
     std::cout << "Number of boxes used : " << this->boxes_container.size() << std::endl;
 
@@ -144,25 +148,26 @@ void Heuristic::choose_algo() {
 
     switch (this->algorithm) 
     {
+        // FF
         case 1: 
         {
             this->first_fit();
             break;
         }
-        
+        // FFD
         case 2: 
         {
             this->descending_order();
             this->first_fit();
             break;
         }
-
+        // BF
         case 3: 
         {
             this->best_fit();
             break;
         }
-
+        // BFD
         case 4: 
         {
             this->best_fit();
@@ -172,10 +177,13 @@ void Heuristic::choose_algo() {
     }
 }
 
+size_t Heuristic::get_nb_used_boxes() const {
+    return this->boxes_container.size();
+}
+
 /**
  * @brief Launch heuristic method
  */
 void Heuristic::launch() {
     this->choose_algo();
-    this->display();
 }

@@ -6,10 +6,10 @@
  * @date 2021-01-06
  * @copyright No copyright no right
  */
+#include "../headers/Input.hpp"
 #include <iostream>
 #include <limits>
 #include <vector>
-#include "../headers/Input.hpp"
 
 /**
  * @brief Min size for boxes and items
@@ -17,25 +17,66 @@
 const int MIN_SIZE = 0;
 
 /**
+ * @brief Minimum possible choice algorithm 
+ */
+const int MIN_OPTION = 1;
+
+/**
+ * @brief Maximum possible choice algorithm
+ */
+const int MAX_OPTION = 4;
+
+/**
+ * @brief Check if input user for launching test and program
+ * @return true if user input equal Y or y
+ * @return false else user input N or n
+ */
+bool Input::secure_choice() {
+
+    char choice;
+    bool is_launch = false;
+
+    while (!(std::cin >> choice) 
+            || (choice != 'Y' && choice != 'y'
+            && choice !='N' && choice != 'n')) {
+
+        if (std::cin.fail()) {
+            std::cout << "Error !" << std::endl;
+        } else {
+            std::cout << "Error ! Select Y or N." << std::endl;
+        }
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cout << "> ";
+    }
+
+    if (choice == 'Y' || choice == 'y') {
+        is_launch = true;
+    }
+
+    return is_launch;
+}
+
+/**
  * @brief Check user input for box size
  * @return int a valid box size
  */
-int Input::secure_box_size() {
+int Input::secure_input_size() {
 
-    int boxes_size;
+    int size;
 
-    while (!(std::cin >> boxes_size) || boxes_size <= MIN_SIZE) {
+    while (!(std::cin >> size) || size <= MIN_SIZE) {
         if (std::cin.fail()) {
             std::cout << "Error !" << std::endl;
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         } else {
-            std::cout << "Error ! Box size must be greater than " << MIN_SIZE << std::endl;
+            std::cout << "Error ! Size must be greater than " << MIN_SIZE << std::endl;
         }
         std::cout << "> ";
     }
 
-    return boxes_size;
+    return size;
 }
 
 /**
@@ -92,7 +133,7 @@ int Input::secure_algo() {
 
     int algo;
 
-    while (!(std::cin >> algo) || algo < 1 || algo > 4) {
+    while (!(std::cin >> algo) || algo < MIN_OPTION || algo > MAX_OPTION) {
         if (std::cin.fail()) {
             std::cout << "Error !" << std::endl;
             std::cin.clear();

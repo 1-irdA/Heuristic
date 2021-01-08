@@ -6,9 +6,8 @@
  * @date 2021-01-06
  * @copyright No copyright no right
  */
-
-#include <iostream>
 #include "../headers/Box.hpp"
+#include <iostream>
 
 /**
  * @brief Construct a box object 
@@ -22,9 +21,8 @@ Box::Box(int capacity) {
  * @brief Add an item in box
  * @param to_add item to add
  */
-void Box::put(const int &to_add)
-{
-    if (to_add <= this->capacity) {
+void Box::put(const int &to_add) {
+    if (to_add <= this->capacity && to_add > 0) {
         this->container.push_back(to_add);
         this->capacity -= to_add;
     }
@@ -33,7 +31,7 @@ void Box::put(const int &to_add)
 /**
  * @brief Display box content
  */
-void Box::display_content() {
+void Box::display_content() const {
 
     int total = 0;
 
@@ -48,6 +46,6 @@ void Box::display_content() {
  * @brief Return box capacity
  * @return int capacity
  */
-int Box::get_capacity() {
+int Box::get_capacity() const {
     return this->capacity;
 }

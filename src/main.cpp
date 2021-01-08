@@ -6,11 +6,13 @@
  * @date 2021-01-04
  * @copyright No copyright no right 
  */
-#include <iostream>
-#include <vector>
-
+#include "headers/Generator.hpp"
 #include "headers/Heuristic.hpp"
 #include "headers/Input.hpp"
+#include "headers/TestHeuristic.hpp"
+#include "headers/Utils.hpp"
+#include <iostream>
+#include <vector>
 
 /**
  * @brief Method to launch program
@@ -20,23 +22,56 @@ int main() {
 
     int boxes_size;
     int algo;
+    int nb_items;
     std::vector<int> items;
 
     std::cout << "Bin packing\n\n";
 
-    std::cout << "Boxes size : ";
-    boxes_size = Input::secure_box_size();
+    std::cout << "Launch tests ? (Y / N) : ";
+    if (Input::secure_choice()) {
+        TestHeuristic::test();
+    }
 
-    std::cout << "Int values to be placed (0 to stop) : \n";
-    items = Input::secure_items(boxes_size);
+    std::cout << "Launch program ? (Y / N) : ";
+    if (Input::secure_choice()) {
 
-    std::cout << "\nChoose heuristics (1, 2, 3, 4) : ";
-    std::cout << "\n(1) First-Fit \n(2) Decreasing First-Fit\n";
-    std::cout << "(3) Best-Fit \n(4) Decreasing Best-Fit\n> ";
-    algo = Input::secure_algo();
+        // Clear console
+        system("clear");
 
-    Heuristic heuristic = Heuristic(algo, boxes_size, items);
-    heuristic.launch();
+        // Input box size
+        std::cout << "Boxes size : ";
+        boxes_size = Input::secure_input_size();
+
+        std::cout << "Input items (Y) or generate them (N) ? ";
+        if (Input::secure_choice()) {
+
+            // Input values to put in box
+            std::cout << "Int values to be placed (0 to stop) : \n";
+            items = Input::secure_items(boxes_size);
+
+        } else {
+            // Generate values to put in box
+            std::cout << "How many objects to be placed do you want to generate ? ";
+            nb_items = Input::secure_input_size();
+            items = Generator::generate_items(nb_items, boxes_size);
+
+            std::cout << "Display generated elements ? (Y / N) : ";
+            if (Input::secure_choice()) {
+                Utils::display(items);
+            }
+        }
+
+        // Choose heuristic algorithm
+        std::cout << "\nChoose heuristics (1, 2, 3, 4, 5) : ";
+        std::cout << "\n(1) First-Fit \n(2) Decreasing First-Fit\n";
+        std::cout << "(3) Best-Fit \n(4) Decreasing Best-Fit\n> ";
+        algo = Input::secure_algo();
+
+        // Launch heuristic algorithm
+        Heuristic heuristic = Heuristic(algo, boxes_size, items);
+        heuristic.launch();
+        heuristic.display();
+    }
 
     return 0;
 }

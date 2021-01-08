@@ -1,7 +1,6 @@
 #ifndef __BOX__
 #define __BOX__
 
-#include <string>
 #include <vector>
 
 class Box {
@@ -18,9 +17,9 @@ class Box {
 
     void put(const int &item);
 
-    int get_capacity();
+    int get_capacity() const;
 
-    void display_content();
+    void display_content() const;
 };
 
 #endif

@@ -20,8 +20,6 @@ class Heuristic {
 
     void best_fit();
 
-    void display();
-
     void descending_order();
 
     void choose_algo();
@@ -35,6 +33,10 @@ class Heuristic {
     Heuristic(int algorithm, int box_size, std::vector<int> values_size);
 
     void launch();
+
+    void display() const;
+
+    size_t get_nb_used_boxes() const;
 };
 
 #endif
