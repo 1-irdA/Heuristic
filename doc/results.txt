@@ -1,0 +1,150 @@
+Boxes size : 10
+Algorithm : FFD
+Boxes used : 481
+Execution time : 0.005674 seconds
+
+Boxes size : 15
+Algorithm : FFD
+Boxes used : 493
+Execution time : 0.006158 seconds
+
+Boxes size : 24
+Algorithm : FFD
+Boxes used : 507
+Execution time : 0.00674 seconds
+
+Boxes size : 32
+Algorithm : FFD
+Boxes used : 513
+Execution time : 0.007049 seconds
+
+Boxes size : 44
+Algorithm : FFD
+Boxes used : 514
+Execution time : 0.006974 seconds
+
+Boxes size : 50
+Algorithm : BFD
+Boxes used : 507
+Execution time : 0.161806 seconds
+
+Boxes size : 78
+Algorithm : FFD
+Boxes used : 510
+Execution time : 0.007016 seconds
+
+Boxes size : 88
+Algorithm : FFD
+Boxes used : 510
+Execution time : 0.007006 seconds
+
+Boxes size : 95
+Algorithm : FFD
+Boxes used : 495
+Execution time : 0.006849 seconds
+
+Boxes size : 124
+Algorithm : FFD
+Boxes used : 496
+Execution time : 0.006918 seconds
+
+Boxes size : 138
+Algorithm : FFD
+Boxes used : 497
+Execution time : 0.006795 seconds
+
+Boxes size : 153
+Algorithm : FFD
+Boxes used : 499
+Execution time : 0.006977 seconds
+
+Boxes size : 158
+Algorithm : FFD
+Boxes used : 508
+Execution time : 0.007367 seconds
+
+Boxes size : 179
+Algorithm : FFD
+Boxes used : 504
+Execution time : 0.00707 seconds
+
+Boxes size : 210
+Algorithm : FFD
+Boxes used : 503
+Execution time : 0.007035 seconds
+
+Boxes size : 235
+Algorithm : FFD
+Boxes used : 483
+Execution time : 0.006507 seconds
+
+Boxes size : 378
+Algorithm : BFD
+Boxes used : 502
+Execution time : 0.790726 seconds
+
+Boxes size : 426
+Algorithm : FFD
+Boxes used : 502
+Execution time : 0.007029 seconds
+
+Boxes size : 541
+Algorithm : FFD
+Boxes used : 511
+Execution time : 0.007008 seconds
+
+Boxes size : 612
+Algorithm : FFD
+Boxes used : 509
+Execution time : 0.007202 seconds
+
+Boxes size : 743
+Algorithm : FFD
+Boxes used : 509
+Execution time : 0.007373 seconds
+
+Boxes size : 789
+Algorithm : FFD
+Boxes used : 518
+Execution time : 0.007504 seconds
+
+Boxes size : 841
+Algorithm : BFD
+Boxes used : 508
+Execution time : 1.63887 seconds
+
+Boxes size : 941
+Algorithm : FFD
+Boxes used : 518
+Execution time : 0.007449 seconds
+
+Boxes size : 1111
+Algorithm : FFD
+Boxes used : 516
+Execution time : 0.007245 seconds
+
+Boxes size : 1203
+Algorithm : BFD
+Boxes used : 507
+Execution time : 2.31912 seconds
+
+Boxes size : 1500
+Algorithm : FFD
+Boxes used : 497
+Execution time : 0.00741 seconds
+
+Boxes size : 1743
+Algorithm : BFD
+Boxes used : 495
+Execution time : 2.86268 seconds
+
+Boxes size : 1857
+Algorithm : FFD
+Boxes used : 491
+Execution time : 0.006829 seconds
+
+Boxes size : 2000
+Algorithm : BFD
+Boxes used : 515
+Execution time : 3.00838 seconds
+

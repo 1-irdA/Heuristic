@@ -54,11 +54,7 @@ int main() {
             std::cout << "How many objects to be placed do you want to generate ? ";
             nb_items = Input::secure_input_size();
             items = Generator::generate_items(nb_items, boxes_size);
-
-            std::cout << "Display generated elements ? (Y / N) : ";
-            if (Input::secure_choice()) {
-                Utils::display(items);
-            }
+            Utils::display(items);
         }
 
         // Choose heuristic algorithm

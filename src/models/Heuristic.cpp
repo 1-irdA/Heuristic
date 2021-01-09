@@ -182,6 +182,10 @@ void Heuristic::choose_algo() {
     }
 }
 
+/**
+ * @brief Get the number of used boxes
+ * @return size_t number of used boxes
+ */
 size_t Heuristic::get_nb_used_boxes() const {
     return this->boxes_container.size();
 }
