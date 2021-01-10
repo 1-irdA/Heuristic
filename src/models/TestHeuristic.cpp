@@ -10,7 +10,7 @@
 /**
  * @brief Number of items to put in boxes
  */
-const int NB_ITEMS = 2000;
+const int NB_ITEMS = 4000;
 
 /**
  * @brief Available heuristic algorithms
@@ -27,7 +27,8 @@ const int FIXTURE_BOXES[] = {
     10, 15, 24, 32, 44, 50, 78, 88, 95, 124, 
     138, 153, 158, 179, 210, 235, 378, 426, 541, 612,
     743, 789, 841, 941, 1111, 1203, 1500, 1743, 1857, 2000,
-    2124, 2268, 2356, 2410, 2480, 2675, 2798, 2875, 2950, 3000
+    2124, 2268, 2356, 2410, 2480, 2675, 2798, 2875, 2950, 3000,
+    3119, 3284, 3371, 3489, 3562, 3599, 3674, 3758, 3841, 4000
 }; 
 
 /**
@@ -36,20 +37,26 @@ const int FIXTURE_BOXES[] = {
  */
 void TestHeuristic::test() {
 
+    // Count time
     clock_t begin_algo;
-    clock_t begin_tests;
     clock_t end_algo;
-    clock_t end_tests;
+
+    // Contains string to process to write better algo in file
     std::vector<std::string> box_time;
+
+    // Items to put in boxes
     std::vector<int> items;
+
+    // Result to process
     std::string res;
+
+    // Algorithms report
+    std::array<int, 4> nb_boxes = { 0 };
 
     std::cout << "\nNumber of objects to be placed in each box size : " << NB_ITEMS << "\n" << std::endl;
     Utils::file_write("******************** " 
                     + std::to_string(NB_ITEMS) 
-                    + " to place for each algorithm ********************\n\n");
-    
-    begin_tests = clock();
+                    + " items to place for each algorithm ********************\n\n");
 
     for (int box_size : FIXTURE_BOXES) {
 
@@ -68,6 +75,9 @@ void TestHeuristic::test() {
             heuristic.launch();
             end_algo = clock();
 
+            // Add in array to display report
+            nb_boxes[it->first - 1] += heuristic.get_nb_used_boxes();
+
             std::cout << "used boxes : " << heuristic.get_nb_used_boxes() << ", ";
             std::cout << "algorithm duration : " 
                     << double(end_algo - begin_algo) / CLOCKS_PER_SEC << " seconds" << std::endl;
@@ -84,7 +94,5 @@ void TestHeuristic::test() {
         Utils::find_better(box_size, box_time);
     }
 
-    end_tests = clock();
-    std::cout << "Tests duration : " << double(end_tests - begin_tests) / CLOCKS_PER_SEC << " seconds" << std::endl;
-    Utils::file_write("****************************************");
+    Utils::display_report(nb_boxes);
 }

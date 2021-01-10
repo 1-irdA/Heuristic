@@ -1,77 +1,358 @@
-4
-6
-9
-6
-13
-8
-2
-15
-9
-4
-8
-2
-9
-2
-7
-4
-4
-2
-5
-15
+********** Boxes size : 10 **********
 
-FF
-Number of boxes used : 9
-Box n°1 : 4 6 2 2  => Total : 14
-Box n°2 : 9 6  => Total : 15
-Box n°3 : 13 2  => Total : 15
-Box n°4 : 8 4 2  => Total : 14
-Box n°5 : 15  => Total : 15
-Box n°6 : 9 4  => Total : 13
-Box n°7 : 8 7  => Total : 15
-Box n°8 : 9 4  => Total : 13
-Box n°9 : 5  => Total : 5
+Algorithm : FF, used boxes : 2219, algorithm duration : 0.086566 seconds
+Algorithm : FFD, used boxes : 2199, algorithm duration : 0.091826 seconds
+Algorithm : BF, used boxes : 2214, algorithm duration : 0.078929 seconds
+Algorithm : BFD, used boxes : 2199, algorithm duration : 0.086089 seconds
 
-******************************************
+********** Boxes size : 15 **********
 
-FFD
-Number of boxes used : 10
-Box n°1 : 15  => Total : 15
-Box n°2 : 15  => Total : 15
-Box n°3 : 13 2  => Total : 15
-Box n°4 : 9 6  => Total : 15
-Box n°5 : 9 6  => Total : 15
-Box n°6 : 9 5  => Total : 14
-Box n°7 : 8 7  => Total : 15
-Box n°8 : 8 4 2  => Total : 14
-Box n°9 : 4 4 4 2  => Total : 14
-Box n°10 : 2  => Total : 2
+Algorithm : FF, used boxes : 2193, algorithm duration : 0.077638 seconds
+Algorithm : FFD, used boxes : 2163, algorithm duration : 0.087256 seconds
+Algorithm : BF, used boxes : 2183, algorithm duration : 0.081605 seconds
+Algorithm : BFD, used boxes : 2163, algorithm duration : 0.09856 seconds
 
-******************************************
+********** Boxes size : 24 **********
 
-BF
-Number of boxes used : 10
-Box n°1 : 4 6 4  => Total : 14
-Box n°2 : 9 6  => Total : 15
-Box n°3 : 13 2  => Total : 15
-Box n°4 : 8 7  => Total : 15
-Box n°5 : 15  => Total : 15
-Box n°6 : 9 2 2 2  => Total : 15
-Box n°7 : 8 4  => Total : 12
-Box n°8 : 9 4  => Total : 13
-Box n°9 : 5  => Total : 5
-Box n°10 : 15  => Total : 15
+Algorithm : FF, used boxes : 2141, algorithm duration : 0.076966 seconds
+Algorithm : FFD, used boxes : 2103, algorithm duration : 0.086401 seconds
+Algorithm : BF, used boxes : 2127, algorithm duration : 0.073154 seconds
+Algorithm : BFD, used boxes : 2103, algorithm duration : 0.080572 seconds
 
-******************************************
+********** Boxes size : 32 **********
 
-BFD
-Number of boxes used : 10
-Box n°1 : 15  => Total : 15
-Box n°2 : 15  => Total : 15
-Box n°3 : 13 2  => Total : 15
-Box n°4 : 9 6  => Total : 15
-Box n°5 : 9 6  => Total : 15
-Box n°6 : 9 5  => Total : 14
-Box n°7 : 8 7  => Total : 15
-Box n°8 : 8 4 2  => Total : 14
-Box n°9 : 4 4 4 2  => Total : 14
-Box n°10 : 2  => Total : 2
+Algorithm : FF, used boxes : 2098, algorithm duration : 0.074784 seconds
+Algorithm : FFD, used boxes : 2059, algorithm duration : 0.093027 seconds
+Algorithm : BF, used boxes : 2077, algorithm duration : 0.085603 seconds
+Algorithm : BFD, used boxes : 2059, algorithm duration : 0.081737 seconds
+
+********** Boxes size : 44 **********
+
+Algorithm : FF, used boxes : 2079, algorithm duration : 0.071747 seconds
+Algorithm : FFD, used boxes : 2038, algorithm duration : 0.081347 seconds
+Algorithm : BF, used boxes : 2059, algorithm duration : 0.071714 seconds
+Algorithm : BFD, used boxes : 2038, algorithm duration : 0.076671 seconds
+
+********** Boxes size : 50 **********
+
+Algorithm : FF, used boxes : 2100, algorithm duration : 0.072 seconds
+Algorithm : FFD, used boxes : 2044, algorithm duration : 0.095085 seconds
+Algorithm : BF, used boxes : 2080, algorithm duration : 0.071958 seconds
+Algorithm : BFD, used boxes : 2044, algorithm duration : 0.081622 seconds
+
+********** Boxes size : 78 **********
+
+Algorithm : FF, used boxes : 2075, algorithm duration : 0.071133 seconds
+Algorithm : FFD, used boxes : 2027, algorithm duration : 0.078275 seconds
+Algorithm : BF, used boxes : 2052, algorithm duration : 0.070806 seconds
+Algorithm : BFD, used boxes : 2027, algorithm duration : 0.079928 seconds
+
+********** Boxes size : 88 **********
+
+Algorithm : FF, used boxes : 2129, algorithm duration : 0.086601 seconds
+Algorithm : FFD, used boxes : 2088, algorithm duration : 0.093303 seconds
+Algorithm : BF, used boxes : 2106, algorithm duration : 0.075556 seconds
+Algorithm : BFD, used boxes : 2088, algorithm duration : 0.0803 seconds
+
+********** Boxes size : 95 **********
+
+Algorithm : FF, used boxes : 2069, algorithm duration : 0.07051 seconds
+Algorithm : FFD, used boxes : 2007, algorithm duration : 0.07803 seconds
+Algorithm : BF, used boxes : 2049, algorithm duration : 0.07015 seconds
+Algorithm : BFD, used boxes : 2007, algorithm duration : 0.076353 seconds
+
+********** Boxes size : 124 **********
+
+Algorithm : FF, used boxes : 2046, algorithm duration : 0.076283 seconds
+Algorithm : FFD, used boxes : 1987, algorithm duration : 0.079228 seconds
+Algorithm : BF, used boxes : 2025, algorithm duration : 0.073142 seconds
+Algorithm : BFD, used boxes : 1987, algorithm duration : 0.076824 seconds
+
+********** Boxes size : 138 **********
+
+Algorithm : FF, used boxes : 2111, algorithm duration : 0.070606 seconds
+Algorithm : FFD, used boxes : 2062, algorithm duration : 0.07758 seconds
+Algorithm : BF, used boxes : 2088, algorithm duration : 0.071276 seconds
+Algorithm : BFD, used boxes : 2062, algorithm duration : 0.081071 seconds
+
+********** Boxes size : 153 **********
+
+Algorithm : FF, used boxes : 2053, algorithm duration : 0.083213 seconds
+Algorithm : FFD, used boxes : 1994, algorithm duration : 0.078197 seconds
+Algorithm : BF, used boxes : 2026, algorithm duration : 0.081929 seconds
+Algorithm : BFD, used boxes : 1994, algorithm duration : 0.07678 seconds
+
+********** Boxes size : 158 **********
+
+Algorithm : FF, used boxes : 2087, algorithm duration : 0.069727 seconds
+Algorithm : FFD, used boxes : 2026, algorithm duration : 0.077704 seconds
+Algorithm : BF, used boxes : 2062, algorithm duration : 0.070483 seconds
+Algorithm : BFD, used boxes : 2026, algorithm duration : 0.077724 seconds
+
+********** Boxes size : 179 **********
+
+Algorithm : FF, used boxes : 2080, algorithm duration : 0.070283 seconds
+Algorithm : FFD, used boxes : 2033, algorithm duration : 0.077685 seconds
+Algorithm : BF, used boxes : 2048, algorithm duration : 0.083604 seconds
+Algorithm : BFD, used boxes : 2033, algorithm duration : 0.083325 seconds
+
+********** Boxes size : 210 **********
+
+Algorithm : FF, used boxes : 2104, algorithm duration : 0.081292 seconds
+Algorithm : FFD, used boxes : 2049, algorithm duration : 0.078915 seconds
+Algorithm : BF, used boxes : 2080, algorithm duration : 0.071542 seconds
+Algorithm : BFD, used boxes : 2049, algorithm duration : 0.079684 seconds
+
+********** Boxes size : 235 **********
+
+Algorithm : FF, used boxes : 2093, algorithm duration : 0.069827 seconds
+Algorithm : FFD, used boxes : 2037, algorithm duration : 0.079448 seconds
+Algorithm : BF, used boxes : 2071, algorithm duration : 0.080692 seconds
+Algorithm : BFD, used boxes : 2037, algorithm duration : 0.079774 seconds
+
+********** Boxes size : 378 **********
+
+Algorithm : FF, used boxes : 2076, algorithm duration : 0.073235 seconds
+Algorithm : FFD, used boxes : 2023, algorithm duration : 0.07675 seconds
+Algorithm : BF, used boxes : 2046, algorithm duration : 0.07101 seconds
+Algorithm : BFD, used boxes : 2023, algorithm duration : 0.079854 seconds
+
+********** Boxes size : 426 **********
+
+Algorithm : FF, used boxes : 2070, algorithm duration : 0.069138 seconds
+Algorithm : FFD, used boxes : 2004, algorithm duration : 0.076361 seconds
+Algorithm : BF, used boxes : 2048, algorithm duration : 0.071731 seconds
+Algorithm : BFD, used boxes : 2004, algorithm duration : 0.082934 seconds
+
+********** Boxes size : 541 **********
+
+Algorithm : FF, used boxes : 2129, algorithm duration : 0.07561 seconds
+Algorithm : FFD, used boxes : 2093, algorithm duration : 0.082935 seconds
+Algorithm : BF, used boxes : 2106, algorithm duration : 0.085471 seconds
+Algorithm : BFD, used boxes : 2093, algorithm duration : 0.096209 seconds
+
+********** Boxes size : 612 **********
+
+Algorithm : FF, used boxes : 2104, algorithm duration : 0.069075 seconds
+Algorithm : FFD, used boxes : 2057, algorithm duration : 0.078527 seconds
+Algorithm : BF, used boxes : 2078, algorithm duration : 0.085101 seconds
+Algorithm : BFD, used boxes : 2057, algorithm duration : 0.092422 seconds
+
+********** Boxes size : 743 **********
+
+Algorithm : FF, used boxes : 2083, algorithm duration : 0.071485 seconds
+Algorithm : FFD, used boxes : 2014, algorithm duration : 0.081479 seconds
+Algorithm : BF, used boxes : 2062, algorithm duration : 0.075684 seconds
+Algorithm : BFD, used boxes : 2014, algorithm duration : 0.083697 seconds
+
+********** Boxes size : 789 **********
+
+Algorithm : FF, used boxes : 2087, algorithm duration : 0.079919 seconds
+Algorithm : FFD, used boxes : 2026, algorithm duration : 0.084296 seconds
+Algorithm : BF, used boxes : 2059, algorithm duration : 0.079508 seconds
+Algorithm : BFD, used boxes : 2026, algorithm duration : 0.083026 seconds
+
+********** Boxes size : 841 **********
+
+Algorithm : FF, used boxes : 2068, algorithm duration : 0.070193 seconds
+Algorithm : FFD, used boxes : 2009, algorithm duration : 0.088314 seconds
+Algorithm : BF, used boxes : 2041, algorithm duration : 0.079443 seconds
+Algorithm : BFD, used boxes : 2009, algorithm duration : 0.08639 seconds
+
+********** Boxes size : 941 **********
+
+Algorithm : FF, used boxes : 2087, algorithm duration : 0.070845 seconds
+Algorithm : FFD, used boxes : 2029, algorithm duration : 0.080035 seconds
+Algorithm : BF, used boxes : 2058, algorithm duration : 0.078018 seconds
+Algorithm : BFD, used boxes : 2029, algorithm duration : 0.084329 seconds
+
+********** Boxes size : 1111 **********
+
+Algorithm : FF, used boxes : 2059, algorithm duration : 0.074877 seconds
+Algorithm : FFD, used boxes : 2002, algorithm duration : 0.078746 seconds
+Algorithm : BF, used boxes : 2036, algorithm duration : 0.073416 seconds
+Algorithm : BFD, used boxes : 2002, algorithm duration : 0.083497 seconds
+
+********** Boxes size : 1203 **********
+
+Algorithm : FF, used boxes : 2026, algorithm duration : 0.067907 seconds
+Algorithm : FFD, used boxes : 1963, algorithm duration : 0.074854 seconds
+Algorithm : BF, used boxes : 2005, algorithm duration : 0.069601 seconds
+Algorithm : BFD, used boxes : 1963, algorithm duration : 0.087342 seconds
+
+********** Boxes size : 1500 **********
+
+Algorithm : FF, used boxes : 2080, algorithm duration : 0.079447 seconds
+Algorithm : FFD, used boxes : 2016, algorithm duration : 0.080356 seconds
+Algorithm : BF, used boxes : 2056, algorithm duration : 0.075853 seconds
+Algorithm : BFD, used boxes : 2016, algorithm duration : 0.086583 seconds
+
+********** Boxes size : 1743 **********
+
+Algorithm : FF, used boxes : 2040, algorithm duration : 0.069289 seconds
+Algorithm : FFD, used boxes : 1977, algorithm duration : 0.076425 seconds
+Algorithm : BF, used boxes : 2015, algorithm duration : 0.0711 seconds
+Algorithm : BFD, used boxes : 1977, algorithm duration : 0.085025 seconds
+
+********** Boxes size : 1857 **********
+
+Algorithm : FF, used boxes : 2064, algorithm duration : 0.074333 seconds
+Algorithm : FFD, used boxes : 2005, algorithm duration : 0.08308 seconds
+Algorithm : BF, used boxes : 2041, algorithm duration : 0.079803 seconds
+Algorithm : BFD, used boxes : 2005, algorithm duration : 0.090316 seconds
+
+********** Boxes size : 2000 **********
+
+Algorithm : FF, used boxes : 2109, algorithm duration : 0.07247 seconds
+Algorithm : FFD, used boxes : 2044, algorithm duration : 0.077545 seconds
+Algorithm : BF, used boxes : 2087, algorithm duration : 0.07449 seconds
+Algorithm : BFD, used boxes : 2044, algorithm duration : 0.087461 seconds
+
+********** Boxes size : 2124 **********
+
+Algorithm : FF, used boxes : 2089, algorithm duration : 0.070323 seconds
+Algorithm : FFD, used boxes : 2020, algorithm duration : 0.089767 seconds
+Algorithm : BF, used boxes : 2062, algorithm duration : 0.074827 seconds
+Algorithm : BFD, used boxes : 2020, algorithm duration : 0.093033 seconds
+
+********** Boxes size : 2268 **********
+
+Algorithm : FF, used boxes : 2088, algorithm duration : 0.069797 seconds
+Algorithm : FFD, used boxes : 2027, algorithm duration : 0.078675 seconds
+Algorithm : BF, used boxes : 2061, algorithm duration : 0.076013 seconds
+Algorithm : BFD, used boxes : 2027, algorithm duration : 0.089942 seconds
+
+********** Boxes size : 2356 **********
+
+Algorithm : FF, used boxes : 2073, algorithm duration : 0.068319 seconds
+Algorithm : FFD, used boxes : 2009, algorithm duration : 0.079647 seconds
+Algorithm : BF, used boxes : 2046, algorithm duration : 0.078108 seconds
+Algorithm : BFD, used boxes : 2009, algorithm duration : 0.097199 seconds
+
+********** Boxes size : 2410 **********
+
+Algorithm : FF, used boxes : 2045, algorithm duration : 0.06993 seconds
+Algorithm : FFD, used boxes : 1983, algorithm duration : 0.080407 seconds
+Algorithm : BF, used boxes : 2021, algorithm duration : 0.072537 seconds
+Algorithm : BFD, used boxes : 1983, algorithm duration : 0.086076 seconds
+
+********** Boxes size : 2480 **********
+
+Algorithm : FF, used boxes : 2056, algorithm duration : 0.069897 seconds
+Algorithm : FFD, used boxes : 1998, algorithm duration : 0.081415 seconds
+Algorithm : BF, used boxes : 2034, algorithm duration : 0.079121 seconds
+Algorithm : BFD, used boxes : 1997, algorithm duration : 0.094845 seconds
+
+********** Boxes size : 2675 **********
+
+Algorithm : FF, used boxes : 2111, algorithm duration : 0.07422 seconds
+Algorithm : FFD, used boxes : 2055, algorithm duration : 0.078887 seconds
+Algorithm : BF, used boxes : 2083, algorithm duration : 0.074746 seconds
+Algorithm : BFD, used boxes : 2055, algorithm duration : 0.090365 seconds
+
+********** Boxes size : 2798 **********
+
+Algorithm : FF, used boxes : 2048, algorithm duration : 0.068883 seconds
+Algorithm : FFD, used boxes : 1980, algorithm duration : 0.07617 seconds
+Algorithm : BF, used boxes : 2029, algorithm duration : 0.075328 seconds
+Algorithm : BFD, used boxes : 1980, algorithm duration : 0.088439 seconds
+
+********** Boxes size : 2875 **********
+
+Algorithm : FF, used boxes : 2105, algorithm duration : 0.077596 seconds
+Algorithm : FFD, used boxes : 2041, algorithm duration : 0.08238 seconds
+Algorithm : BF, used boxes : 2085, algorithm duration : 0.07909 seconds
+Algorithm : BFD, used boxes : 2041, algorithm duration : 0.091418 seconds
+
+********** Boxes size : 2950 **********
+
+Algorithm : FF, used boxes : 2049, algorithm duration : 0.070514 seconds
+Algorithm : FFD, used boxes : 1990, algorithm duration : 0.077144 seconds
+Algorithm : BF, used boxes : 2029, algorithm duration : 0.073883 seconds
+Algorithm : BFD, used boxes : 1990, algorithm duration : 0.093829 seconds
+
+********** Boxes size : 3000 **********
+
+Algorithm : FF, used boxes : 2055, algorithm duration : 0.078271 seconds
+Algorithm : FFD, used boxes : 1999, algorithm duration : 0.079274 seconds
+Algorithm : BF, used boxes : 2033, algorithm duration : 0.075439 seconds
+Algorithm : BFD, used boxes : 1999, algorithm duration : 0.089358 seconds
+
+********** Boxes size : 3119 **********
+
+Algorithm : FF, used boxes : 2037, algorithm duration : 0.068691 seconds
+Algorithm : FFD, used boxes : 1986, algorithm duration : 0.075788 seconds
+Algorithm : BF, used boxes : 2011, algorithm duration : 0.073317 seconds
+Algorithm : BFD, used boxes : 1986, algorithm duration : 0.094743 seconds
+
+********** Boxes size : 3284 **********
+
+Algorithm : FF, used boxes : 2078, algorithm duration : 0.069374 seconds
+Algorithm : FFD, used boxes : 2015, algorithm duration : 0.084038 seconds
+Algorithm : BF, used boxes : 2049, algorithm duration : 0.077264 seconds
+Algorithm : BFD, used boxes : 2015, algorithm duration : 0.098974 seconds
+
+********** Boxes size : 3371 **********
+
+Algorithm : FF, used boxes : 2087, algorithm duration : 0.076783 seconds
+Algorithm : FFD, used boxes : 2036, algorithm duration : 0.076775 seconds
+Algorithm : BF, used boxes : 2058, algorithm duration : 0.074371 seconds
+Algorithm : BFD, used boxes : 2036, algorithm duration : 0.091487 seconds
+
+********** Boxes size : 3489 **********
+
+Algorithm : FF, used boxes : 2057, algorithm duration : 0.074313 seconds
+Algorithm : FFD, used boxes : 2001, algorithm duration : 0.086405 seconds
+Algorithm : BF, used boxes : 2034, algorithm duration : 0.073252 seconds
+Algorithm : BFD, used boxes : 2001, algorithm duration : 0.094298 seconds
+
+********** Boxes size : 3562 **********
+
+Algorithm : FF, used boxes : 2075, algorithm duration : 0.070605 seconds
+Algorithm : FFD, used boxes : 2019, algorithm duration : 0.077611 seconds
+Algorithm : BF, used boxes : 2051, algorithm duration : 0.074674 seconds
+Algorithm : BFD, used boxes : 2019, algorithm duration : 0.090865 seconds
+
+********** Boxes size : 3599 **********
+
+Algorithm : FF, used boxes : 2065, algorithm duration : 0.069558 seconds
+Algorithm : FFD, used boxes : 2010, algorithm duration : 0.077512 seconds
+Algorithm : BF, used boxes : 2037, algorithm duration : 0.079499 seconds
+Algorithm : BFD, used boxes : 2010, algorithm duration : 0.097634 seconds
+
+********** Boxes size : 3674 **********
+
+Algorithm : FF, used boxes : 2089, algorithm duration : 0.074636 seconds
+Algorithm : FFD, used boxes : 2031, algorithm duration : 0.07954 seconds
+Algorithm : BF, used boxes : 2065, algorithm duration : 0.073286 seconds
+Algorithm : BFD, used boxes : 2031, algorithm duration : 0.091796 seconds
+
+********** Boxes size : 3758 **********
+
+Algorithm : FF, used boxes : 2092, algorithm duration : 0.07017 seconds
+Algorithm : FFD, used boxes : 2021, algorithm duration : 0.077666 seconds
+Algorithm : BF, used boxes : 2071, algorithm duration : 0.084691 seconds
+Algorithm : BFD, used boxes : 2021, algorithm duration : 0.091528 seconds
+
+********** Boxes size : 3841 **********
+
+Algorithm : FF, used boxes : 2086, algorithm duration : 0.073817 seconds
+Algorithm : FFD, used boxes : 2044, algorithm duration : 0.077615 seconds
+Algorithm : BF, used boxes : 2063, algorithm duration : 0.076284 seconds
+Algorithm : BFD, used boxes : 2044, algorithm duration : 0.092476 seconds
+
+********** Boxes size : 4000 **********
+
+Algorithm : FF, used boxes : 2074, algorithm duration : 0.068203 seconds
+Algorithm : FFD, used boxes : 2015, algorithm duration : 0.076327 seconds
+Algorithm : BF, used boxes : 2052, algorithm duration : 0.079244 seconds
+Algorithm : BFD, used boxes : 2015, algorithm duration : 0.100379 seconds
+
+********** Algorithms reports **********
+
+FF / BF = 1.011246
+FF / FFD = 1.027203
+FF / BFD = 1.027213
+BF / FFD = 1.015780
+BF / BFD = 1.015790
+FFD / BFD = 1.000010

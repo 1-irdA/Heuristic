@@ -38,24 +38,29 @@ Heuristic::Heuristic(int algorithm, int box_size, std::vector<int> values_size) 
  */
 void Heuristic::first_fit() {
 
-    int current_box = 0;
+    bool is_added;
+    int index_box = 0;
+    this->boxes_container.push_back(Box(this->box_size));
 
     while(!this->items_container.empty()) {
 
-        this->boxes_container.push_back(Box(this->box_size));
+        is_added = false;
 
-        for (size_t current_item = 0; current_item < this->items_container.size() 
-            && this->boxes_container[current_box].get_capacity() > 0; current_item++) {
+        for (size_t current_box = 0; current_box < this->boxes_container.size() && !is_added; current_box++) {
 
-            if (this->items_container[current_item] <= this->boxes_container[current_box].get_capacity()) {
-                this->boxes_container[current_box].put(this->items_container[current_item]);
-                this->items_container.erase(this->items_container.begin() + current_item);
-                // don't jump an item
-                current_item--;
-            } 
+            if (this->items_container[0] <= this->boxes_container[current_box].get_capacity()) {
+                this->boxes_container[current_box].put(this->items_container[0]);
+                this->remove_at(0);
+                is_added = true;
+            }
         }
 
-        current_box++;
+        if (!is_added) {
+            index_box++;
+            this->boxes_container.push_back(Box(this->box_size));
+            this->boxes_container[index_box].put(this->items_container[0]);
+            this->remove_at(0);
+        }
     }
 }
 

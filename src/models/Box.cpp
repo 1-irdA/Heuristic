@@ -39,7 +39,7 @@ void Box::display_content() const {
         std::cout << item << " "; 
         total += item;
     }
-    std::cout << " => Total : " << total << std::endl;
+    std::cout << " => Used place : " << total << std::endl;
 }
 
 /**

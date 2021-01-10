@@ -1,4 +1,5 @@
 #include "../headers/Utils.hpp"
+#include <array>
 #include <fstream>
 #include <iostream>
 #include <limits>
@@ -109,4 +110,28 @@ std::vector<std::string> Utils::split(std::string to_split, char delimiter) {
     }
 
     return elements;
+}
+
+/**
+ * @brief Display algorithm report
+ * @param nb_boxes Array with nb boxes used by algorithms
+ */
+void Utils::display_report(std::array<int, 4> nb_boxes) {
+
+    std::cout << "\n********** Algorithms reports **********\n\n";
+
+    // Report = algo / algo
+    float ff_bf = (float) nb_boxes[0] / nb_boxes[2];
+    float ff_ffd = (float) nb_boxes[0] / nb_boxes[1];
+    float ff_bfd = (float) nb_boxes[0] / nb_boxes[3];
+    float bf_ffd = (float) nb_boxes[2] / nb_boxes[1];
+    float bf_bfd = (float) nb_boxes[2] / nb_boxes[3];
+    float ffd_bfd = (float) nb_boxes[1] / nb_boxes[3];
+
+    std::cout << "FF / BF = " + std::to_string(ff_bf) + "\n"
+        + "FF / FFD = " + std::to_string(ff_ffd) + "\n"
+        + "FF / BFD = " + std::to_string(ff_bfd) + "\n"
+        + "BF / FFD = " + std::to_string(bf_ffd) + "\n"
+        + "BF / BFD = " + std::to_string(bf_bfd) + "\n"
+        + "FFD / BFD = " + std::to_string(ffd_bfd) + "\n\n";
 }

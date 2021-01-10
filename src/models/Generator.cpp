@@ -17,7 +17,7 @@ std::vector<int> Generator::generate_items(int nb_items, int max) {
     std::vector<int> items;
 
     for (int i = 0; i < nb_items; i++) {
-        int item = std::rand() / ((RAND_MAX + 1u) / max);
+        int item = (rand() % max) + 1;
         items.push_back(item);
     }
 

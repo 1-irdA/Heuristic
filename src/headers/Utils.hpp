@@ -1,3 +1,4 @@
+#include <array>
 #include <string>
 #include <vector>
 
@@ -17,4 +18,6 @@ class Utils {
     static void display(const std::vector<int> to_display);
 
     static void find_better(int box_size, std::vector<std::string> &to_examine);
+
+    static void display_report(std::array<int, 4> nb_boxes);
 };
