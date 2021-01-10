@@ -24,7 +24,7 @@ const int MIN_OPTION = 1;
 /**
  * @brief Maximum possible choice algorithm
  */
-const int MAX_OPTION = 6;
+const int MAX_OPTION = 4;
 
 /**
  * @brief Check if input user for launching test and program
@@ -53,7 +53,7 @@ bool Input::secure_choice() {
     if (choice == 'Y' || choice == 'y') {
         is_launch = true;
     }
-
+    
     return is_launch;
 }
 
@@ -73,9 +73,7 @@ int Input::secure_input_size() {
         } else {
             std::cout << "Error ! Size must be greater than " << MIN_SIZE << std::endl;
         }
-        std::cout << "> ";
     }
-
     return size;
 }
 
@@ -98,9 +96,7 @@ int Input::secure_item_size(int max_size) {
         } else {
             std::cout << "Error ! Item must be lower than " << max_size << std::endl;
         }
-        std::cout << "> ";
     }
-
     return item_size;
 }
 
@@ -115,7 +111,6 @@ std::vector<int> Input::secure_items(int max_size) {
     int size;
 
     do {
-        std::cout << "> ";
         size = Input::secure_item_size(max_size);
         if (size != 0) {
             items_size.push_back(size);
@@ -143,6 +138,5 @@ int Input::secure_algo() {
         }
         std::cout << "> ";
     }
-
     return algo;
 }

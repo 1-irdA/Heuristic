@@ -1,0 +1,77 @@
+4
+6
+9
+6
+13
+8
+2
+15
+9
+4
+8
+2
+9
+2
+7
+4
+4
+2
+5
+15
+
+FF
+Number of boxes used : 9
+Box n°1 : 4 6 2 2  => Total : 14
+Box n°2 : 9 6  => Total : 15
+Box n°3 : 13 2  => Total : 15
+Box n°4 : 8 4 2  => Total : 14
+Box n°5 : 15  => Total : 15
+Box n°6 : 9 4  => Total : 13
+Box n°7 : 8 7  => Total : 15
+Box n°8 : 9 4  => Total : 13
+Box n°9 : 5  => Total : 5
+
+******************************************
+
+FFD
+Number of boxes used : 10
+Box n°1 : 15  => Total : 15
+Box n°2 : 15  => Total : 15
+Box n°3 : 13 2  => Total : 15
+Box n°4 : 9 6  => Total : 15
+Box n°5 : 9 6  => Total : 15
+Box n°6 : 9 5  => Total : 14
+Box n°7 : 8 7  => Total : 15
+Box n°8 : 8 4 2  => Total : 14
+Box n°9 : 4 4 4 2  => Total : 14
+Box n°10 : 2  => Total : 2
+
+******************************************
+
+BF
+Number of boxes used : 10
+Box n°1 : 4 6 4  => Total : 14
+Box n°2 : 9 6  => Total : 15
+Box n°3 : 13 2  => Total : 15
+Box n°4 : 8 7  => Total : 15
+Box n°5 : 15  => Total : 15
+Box n°6 : 9 2 2 2  => Total : 15
+Box n°7 : 8 4  => Total : 12
+Box n°8 : 9 4  => Total : 13
+Box n°9 : 5  => Total : 5
+Box n°10 : 15  => Total : 15
+
+******************************************
+
+BFD
+Number of boxes used : 10
+Box n°1 : 15  => Total : 15
+Box n°2 : 15  => Total : 15
+Box n°3 : 13 2  => Total : 15
+Box n°4 : 9 6  => Total : 15
+Box n°5 : 9 6  => Total : 15
+Box n°6 : 9 5  => Total : 14
+Box n°7 : 8 7  => Total : 15
+Box n°8 : 8 4 2  => Total : 14
+Box n°9 : 4 4 4 2  => Total : 14
+Box n°10 : 2  => Total : 2

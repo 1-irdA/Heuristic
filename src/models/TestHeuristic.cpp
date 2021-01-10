@@ -10,24 +10,24 @@
 /**
  * @brief Number of items to put in boxes
  */
-const int NB_ITEMS = 1000;
+const int NB_ITEMS = 2000;
 
 /**
  * @brief Available heuristic algorithms
  */
 std::map<int, std::string> fixture_algorithms = {
     { 1, "FF" }, { 2, "FFD"}, 
-    { 3, "BF" }, { 4, "BFD" }, 
-    { 5, "PA"}, {6, "PAD"}
+    { 3, "BF" }, { 4, "BFD" }
 };
 
 /**
  * @brief Boxes size to test
  */
-const int fixture_boxes[] = {
+const int FIXTURE_BOXES[] = {
     10, 15, 24, 32, 44, 50, 78, 88, 95, 124, 
     138, 153, 158, 179, 210, 235, 378, 426, 541, 612,
-    743, 789, 841, 941, 1111, 1203, 1500, 1743, 1857, 2000
+    743, 789, 841, 941, 1111, 1203, 1500, 1743, 1857, 2000,
+    2124, 2268, 2356, 2410, 2480, 2675, 2798, 2875, 2950, 3000
 }; 
 
 /**
@@ -41,17 +41,21 @@ void TestHeuristic::test() {
     clock_t end_algo;
     clock_t end_tests;
     std::vector<std::string> box_time;
+    std::vector<int> items;
     std::string res;
 
     std::cout << "\nNumber of objects to be placed in each box size : " << NB_ITEMS << "\n" << std::endl;
+    Utils::file_write("******************** " 
+                    + std::to_string(NB_ITEMS) 
+                    + " to place for each algorithm ********************\n\n");
     
     begin_tests = clock();
 
-    for (int box_size : fixture_boxes) {
+    for (int box_size : FIXTURE_BOXES) {
 
         std::cout << "\n********** Boxes size : " << box_size << " **********\n\n";
 
-        std::vector<int> items = Generator::generate_items(NB_ITEMS, box_size);
+        items = Generator::generate_items(NB_ITEMS, box_size);
 
         for (std::map<int, std::string>::iterator it = fixture_algorithms.begin(); 
             it != fixture_algorithms.end(); 
@@ -72,7 +76,7 @@ void TestHeuristic::test() {
             res = it->second + ":" + std::to_string(heuristic.get_nb_used_boxes()) + ":" 
                     + std::to_string(double(end_algo - begin_algo) / CLOCKS_PER_SEC) + "\n";
 
-            // Add result in map to compare them after
+            // Add result in array to compare them after
             box_time.push_back(res);
         }
 
@@ -82,5 +86,5 @@ void TestHeuristic::test() {
 
     end_tests = clock();
     std::cout << "Tests duration : " << double(end_tests - begin_tests) / CLOCKS_PER_SEC << " seconds" << std::endl;
+    Utils::file_write("****************************************");
 }
-

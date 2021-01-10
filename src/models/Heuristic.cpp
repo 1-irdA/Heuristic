@@ -113,57 +113,6 @@ void Heuristic::best_fit() {
 }
 
 /**
- * @brief Personnal algorithm
- */
-void Heuristic::personnal_algo() {
-
-    int current_box = 0;
-    int better_choice;
-
-    while(!this->items_container.empty()) {
-
-        this->boxes_container.push_back(Box(this->box_size));
-        this->boxes_container[current_box].put(this->items_container[0]);
-        this->remove_at(0);
-
-        for (size_t current_item = 0; current_item < this->items_container.size()
-            && this->boxes_container[current_box].get_capacity() > 0;
-            current_item++) {
-
-            better_choice = this->get_better_item(current_box);
-            this->boxes_container[current_box].put(better_choice);
-        }
-
-        current_box++;
-    }
-}
-
-/**
- * @brief Get the better index to add
- * @param current_box current box to fill
- * @return int item with max size
- */
-int Heuristic::get_better_item(int current_box) {
-
-    int max = 0;
-    int i = 0;
-    int index_max = -1;
-
-    for (int item : this->items_container) {
-
-        if (item > max && item <= this->boxes_container[current_box].get_capacity()) {
-            max = item;
-            index_max = i;
-        }
-        i++;
-    }
-
-    this->remove_at(index_max);
-
-    return max;
-}
-
-/**
  * @brief Remove item at specified index
  * @param index index of item to remove
  */
@@ -226,19 +175,6 @@ void Heuristic::choose_algo() {
         {
             this->descending_order();
             this->best_fit();
-            break;
-        }
-        // personnal algo
-        case 5:
-        {
-            this->personnal_algo();
-            break;
-        }
-        // personnal algo decreasing
-        case 6:
-        {
-            this->descending_order();
-            this->personnal_algo();
             break;
         }
         // Not exist

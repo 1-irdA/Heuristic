@@ -20,13 +20,9 @@ class Heuristic {
 
     void best_fit();
 
-    void personnal_algo();
-
     void descending_order();
 
     void choose_algo();
-
-    int get_better_item(int current_box);
 
     void remove_at(int index);
 
