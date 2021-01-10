@@ -20,6 +20,8 @@ class Heuristic {
 
     void best_fit();
 
+    void personnal_algo();
+
     void descending_order();
 
     void choose_algo();

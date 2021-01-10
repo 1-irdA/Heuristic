@@ -58,9 +58,10 @@ int main() {
         }
 
         // Choose heuristic algorithm
-        std::cout << "\nChoose heuristics (1, 2, 3, 4, 5) : ";
-        std::cout << "\n(1) First-Fit \n(2) Decreasing First-Fit\n";
-        std::cout << "(3) Best-Fit \n(4) Decreasing Best-Fit\n> ";
+        std::cout << "\nChoose heuristics (1, 2, 3, 4, 5, 6) : \n";
+        std::cout << "(1) First-Fit \n(2) Decreasing First-Fit\n";
+        std::cout << "(3) Best-Fit \n(4) Decreasing Best-Fit\n";
+        std::cout << "(5) Personnal algorithm\n(6) Decreasing personnal algorithm\n> ";
         algo = Input::secure_algo();
 
         // Launch heuristic algorithm

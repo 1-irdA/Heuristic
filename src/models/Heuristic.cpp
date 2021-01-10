@@ -10,6 +10,7 @@
 #include "../headers/Heuristic.hpp"
 #include <algorithm>
 #include <iostream>
+#include <limits>
 #include <stdexcept>
 #include <vector>
 
@@ -63,6 +64,59 @@ void Heuristic::first_fit() {
  */
 void Heuristic::best_fit() {
 
+    int remaining_capacity;
+    int best_remaining_capacity;
+    int best_box = -1;
+    int remaining_zero = -1;
+    int nb_box = 0;
+    
+    // Add a box and an element and remove the added element
+    this->boxes_container.push_back(Box(this->box_size));
+    this->boxes_container[nb_box].put(this->items_container[0]);
+    this->remove_at(0);
+
+    while(!this->items_container.empty()) {
+
+        best_remaining_capacity = std::numeric_limits<int>::max();
+        best_box = -1;
+        remaining_zero = -1;
+        
+        for (size_t current_box = 0; 
+            current_box < this->boxes_container.size() 
+            && remaining_zero == -1;
+            current_box++) {
+
+            if (this->items_container[0] <= this->boxes_container[current_box].get_capacity()) {
+
+                remaining_capacity = this->boxes_container[current_box].get_capacity() - this->items_container[0];
+
+                if (remaining_capacity == 0) {
+                    remaining_zero = current_box;
+                } else if (remaining_capacity < best_remaining_capacity) {
+                    best_remaining_capacity = remaining_capacity;
+                    best_box = current_box;
+                }
+            } 
+        }
+
+        if (remaining_zero != -1) {
+            this->boxes_container[remaining_zero].put(this->items_container[0]);
+        } else if (best_box != -1 ) {
+            this->boxes_container[best_box].put(this->items_container[0]);
+        } else {
+            nb_box++;
+            this->boxes_container.push_back(Box(this->box_size));
+            this->boxes_container[nb_box].put(this->items_container[0]);   
+        }
+        this->remove_at(0);   
+    }
+}
+
+/**
+ * @brief Personnal algorithm
+ */
+void Heuristic::personnal_algo() {
+
     int current_box = 0;
     int better_choice;
 
@@ -114,7 +168,7 @@ int Heuristic::get_better_item(int current_box) {
  * @param index index of item to remove
  */
 void Heuristic::remove_at(int index) {
-    if (index >= 0) {
+    if (index >= 0 && this->items_container.size() > 0) {
         this->items_container.erase(this->items_container.begin() + index);
     }
 }
@@ -170,8 +224,21 @@ void Heuristic::choose_algo() {
         // BFD
         case 4: 
         {
+            this->descending_order();
             this->best_fit();
-            this->first_fit();
+            break;
+        }
+        // personnal algo
+        case 5:
+        {
+            this->personnal_algo();
+            break;
+        }
+        // personnal algo decreasing
+        case 6:
+        {
+            this->descending_order();
+            this->personnal_algo();
             break;
         }
         // Not exist

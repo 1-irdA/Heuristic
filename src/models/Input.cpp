@@ -24,7 +24,7 @@ const int MIN_OPTION = 1;
 /**
  * @brief Maximum possible choice algorithm
  */
-const int MAX_OPTION = 4;
+const int MAX_OPTION = 6;
 
 /**
  * @brief Check if input user for launching test and program

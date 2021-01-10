@@ -16,7 +16,9 @@ const int NB_ITEMS = 1000;
  * @brief Available heuristic algorithms
  */
 std::map<int, std::string> fixture_algorithms = {
-    { 1, "FF" }, { 2, "FFD"}, { 3, "BF" }, { 4, "BFD" }
+    { 1, "FF" }, { 2, "FFD"}, 
+    { 3, "BF" }, { 4, "BFD" }, 
+    { 5, "PA"}, {6, "PAD"}
 };
 
 /**
@@ -49,13 +51,13 @@ void TestHeuristic::test() {
 
         std::cout << "\n********** Boxes size : " << box_size << " **********\n\n";
 
+        std::vector<int> items = Generator::generate_items(NB_ITEMS, box_size);
+
         for (std::map<int, std::string>::iterator it = fixture_algorithms.begin(); 
             it != fixture_algorithms.end(); 
             it++) {
 
             std::cout << "Algorithm : " << it->second << ", ";
-            
-            std::vector<int> items = Generator::generate_items(NB_ITEMS, box_size);
             
             Heuristic heuristic = Heuristic(it->first, box_size, items);
             begin_algo = clock();
