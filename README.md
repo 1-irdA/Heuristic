@@ -1,4 +1,4 @@
-# BinPacking
+# bin-packing
 FF, FFD, BF, BFD in C++.  
 
 ![Alt text](box.png?raw=true "Box")
