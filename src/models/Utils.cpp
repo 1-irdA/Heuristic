@@ -15,7 +15,7 @@ const char DELIMITER = ':';
 /**
  * @brief Filename to put results
  */
-const std::string FILENAME = "doc/results.txt";
+const std::string FILENAME = "docs/results.txt";
 
 /**
  * @brief Available algorithms

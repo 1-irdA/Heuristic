@@ -1,9 +1,9 @@
 # bin-packing
 FF, FFD, BF, BFD in C++.  
 
-![Alt text](box.png?raw=true "Box")
+![Alt text](assets/box.png?raw=true "Box")
 
-# Explanations
+##  Explanations
 FF -> First-Fit  
 FFD -> First-Fit Decreasing  
 BF -> Best-Fit  
@@ -15,3 +15,31 @@ The problem is to minimize the number of boxes to be used in order to store the 
 The problem is to minimize the number of boxes to be used in oder to store the n objects.  
 There is no known polynomial algorithm to solve this problem.  
 The bin packing problem is not in class P; in fact, it is an NP-complete problem.  
+
+## Make
+
+• Compile  
+
+```sh
+make main
+```
+
+• Run  
+
+```sh
+make run
+```
+
+## Docker
+
+• Build image  
+
+```sh
+docker build -t bin-packing
+```
+
+• Run image  
+
+```sh
+docker run -it bin-packing
+```

@@ -1,7 +1,0 @@
-From root to compile :
-
-g++ -Wall -std=c++17 src/main.cpp src/models/*.cpp -o main
-
-To launch :
-
-./main
