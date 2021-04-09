@@ -1,0 +1,252 @@
+******************** 4000 items to place for each algorithm ********************
+
+Boxes size : 10
+Algorithm : FFD
+Boxes used : 2222
+Execution time : 0.036627 seconds
+
+Boxes size : 15
+Algorithm : FFD
+Boxes used : 2175
+Execution time : 0.036972 seconds
+
+Boxes size : 24
+Algorithm : FFD
+Boxes used : 2130
+Execution time : 0.035725 seconds
+
+Boxes size : 32
+Algorithm : FFD
+Boxes used : 2083
+Execution time : 0.033254 seconds
+
+Boxes size : 44
+Algorithm : FFD
+Boxes used : 2065
+Execution time : 0.034682 seconds
+
+Boxes size : 50
+Algorithm : FFD
+Boxes used : 2075
+Execution time : 0.036653 seconds
+
+Boxes size : 78
+Algorithm : FFD
+Boxes used : 2050
+Execution time : 0.035756 seconds
+
+Boxes size : 88
+Algorithm : FFD
+Boxes used : 2038
+Execution time : 0.03517 seconds
+
+Boxes size : 95
+Algorithm : BFD
+Boxes used : 2046
+Execution time : 0.036086 seconds
+
+Boxes size : 124
+Algorithm : FFD
+Boxes used : 2005
+Execution time : 0.032984 seconds
+
+Boxes size : 138
+Algorithm : FFD
+Boxes used : 2050
+Execution time : 0.033862 seconds
+
+Boxes size : 153
+Algorithm : FFD
+Boxes used : 2044
+Execution time : 0.033079 seconds
+
+Boxes size : 158
+Algorithm : FFD
+Boxes used : 1989
+Execution time : 0.030795 seconds
+
+Boxes size : 179
+Algorithm : FFD
+Boxes used : 2076
+Execution time : 0.031526 seconds
+
+Boxes size : 210
+Algorithm : FFD
+Boxes used : 2043
+Execution time : 0.035781 seconds
+
+Boxes size : 235
+Algorithm : FFD
+Boxes used : 2056
+Execution time : 0.030803 seconds
+
+Boxes size : 378
+Algorithm : FFD
+Boxes used : 1996
+Execution time : 0.031442 seconds
+
+Boxes size : 426
+Algorithm : FFD
+Boxes used : 2034
+Execution time : 0.035733 seconds
+
+Boxes size : 541
+Algorithm : FFD
+Boxes used : 1998
+Execution time : 0.032088 seconds
+
+Boxes size : 612
+Algorithm : FFD
+Boxes used : 1977
+Execution time : 0.033159 seconds
+
+Boxes size : 743
+Algorithm : FFD
+Boxes used : 2030
+Execution time : 0.036219 seconds
+
+Boxes size : 789
+Algorithm : FFD
+Boxes used : 2052
+Execution time : 0.035526 seconds
+
+Boxes size : 841
+Algorithm : BFD
+Boxes used : 1989
+Execution time : 0.036406 seconds
+
+Boxes size : 941
+Algorithm : FFD
+Boxes used : 2001
+Execution time : 0.036016 seconds
+
+Boxes size : 1111
+Algorithm : FFD
+Boxes used : 2040
+Execution time : 0.032485 seconds
+
+Boxes size : 1203
+Algorithm : FFD
+Boxes used : 2022
+Execution time : 0.036051 seconds
+
+Boxes size : 1500
+Algorithm : FFD
+Boxes used : 2003
+Execution time : 0.033195 seconds
+
+Boxes size : 1743
+Algorithm : FFD
+Boxes used : 2066
+Execution time : 0.034413 seconds
+
+Boxes size : 1857
+Algorithm : FFD
+Boxes used : 2023
+Execution time : 0.036518 seconds
+
+Boxes size : 2000
+Algorithm : FFD
+Boxes used : 2027
+Execution time : 0.033214 seconds
+
+Boxes size : 2124
+Algorithm : FFD
+Boxes used : 1996
+Execution time : 0.032163 seconds
+
+Boxes size : 2268
+Algorithm : FFD
+Boxes used : 2038
+Execution time : 0.033519 seconds
+
+Boxes size : 2356
+Algorithm : FFD
+Boxes used : 1973
+Execution time : 0.034052 seconds
+
+Boxes size : 2410
+Algorithm : FFD
+Boxes used : 2010
+Execution time : 0.03552 seconds
+
+Boxes size : 2480
+Algorithm : FFD
+Boxes used : 2009
+Execution time : 0.032159 seconds
+
+Boxes size : 2675
+Algorithm : FFD
+Boxes used : 2007
+Execution time : 0.032571 seconds
+
+Boxes size : 2798
+Algorithm : FFD
+Boxes used : 2002
+Execution time : 0.034348 seconds
+
+Boxes size : 2875
+Algorithm : FFD
+Boxes used : 2002
+Execution time : 0.031565 seconds
+
+Boxes size : 2950
+Algorithm : FFD
+Boxes used : 1957
+Execution time : 0.035074 seconds
+
+Boxes size : 3000
+Algorithm : FFD
+Boxes used : 2000
+Execution time : 0.030043 seconds
+
+Boxes size : 3119
+Algorithm : FFD
+Boxes used : 1998
+Execution time : 0.033465 seconds
+
+Boxes size : 3284
+Algorithm : FFD
+Boxes used : 1998
+Execution time : 0.035844 seconds
+
+Boxes size : 3371
+Algorithm : FFD
+Boxes used : 1974
+Execution time : 0.03929 seconds
+
+Boxes size : 3489
+Algorithm : FFD
+Boxes used : 2053
+Execution time : 0.032186 seconds
+
+Boxes size : 3562
+Algorithm : FFD
+Boxes used : 1990
+Execution time : 0.03186 seconds
+
+Boxes size : 3599
+Algorithm : FFD
+Boxes used : 2005
+Execution time : 0.041802 seconds
+
+Boxes size : 3674
+Algorithm : FFD
+Boxes used : 1940
+Execution time : 0.037905 seconds
+
+Boxes size : 3758
+Algorithm : FFD
+Boxes used : 2008
+Execution time : 0.038754 seconds
+
+Boxes size : 3841
+Algorithm : FFD
+Boxes used : 2078
+Execution time : 0.036767 seconds
+
+Boxes size : 4000
+Algorithm : FFD
+Boxes used : 2023
+Execution time : 0.035347 seconds
+

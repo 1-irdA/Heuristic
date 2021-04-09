@@ -13,9 +13,9 @@
 const char DELIMITER = ':';
 
 /**
- * @brief Filename to put results
+ * @brief Filename to put bests algo results
  */
-const std::string FILENAME = "docs/results.txt";
+const std::string FILENAME = "results/bests.txt";
 
 /**
  * @brief Available algorithms

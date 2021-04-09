@@ -4,6 +4,7 @@ FF, FFD, BF, BFD in C++.
 ![Alt text](assets/box.png?raw=true "Box")
 
 ##  Explanations
+
 FF -> First-Fit  
 FFD -> First-Fit Decreasing  
 BF -> Best-Fit  
@@ -35,11 +36,11 @@ make run
 • Build image  
 
 ```sh
-docker build -t bin-packing
+docker build -t <name>
 ```
 
 • Run image  
 
 ```sh
-docker run -it bin-packing
+docker run -it <name>
 ```
